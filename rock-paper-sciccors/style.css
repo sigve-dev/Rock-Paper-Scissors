@@ -1,0 +1,124 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #917461;
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+}
+
+.gameScreen { 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-around; 
+    background-color: #566566; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%; 
+    position: relative;
+    transition: 0.3s;
+}
+
+.gameScreen:hover {
+    box-shadow: 1px 1px black;
+}
+
+.title {
+    color: #E68A4E;
+    height: 80px;
+}
+
+.hands {
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    border-bottom: 1px black solid;
+}
+
+    
+#rockHand, #paperHand, #scissorHand {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    width: 60px; 
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s; 
+    border-radius: 100%;
+    overflow: hidden; /
+}
+
+#rockHand img, #paperHand img, #scissorHand img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+#rockHand:hover, #paperHand:hover, #scissorHand:hover {
+    transform: scale(1.15);
+}
+
+.game {
+    margin-top: 10px;
+}
+
+.status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .gameScreen {
+        width: 100%; 
+        padding: 15px;
+    }
+
+    .hands div {
+        width: 50px; 
+        height: 50px;
+    }
+    
+    .status p {
+        font-size: 14px; 
+    }
+}
+
+.status p, .game p {
+color: black;
+margin: 5px 0; 
+}
+
+#signature {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    font-size: 8px; 
+    color: #62A2A6; 
+    text-align: right;
+}
+
+#resetButton {
+
+    padding: 5px 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #45a049; /* Green color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#resetButton:hover {
+    background-color: #2b602d; /* Darker shade of green */
+    transform: scale(1.2);
+}
